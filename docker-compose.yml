@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bx-services:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bx-services
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+    networks:
+      - bx-network
+    restart: unless-stopped
+
+networks:
+  bx-network:
+    driver: bridge 
