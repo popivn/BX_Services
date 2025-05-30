@@ -12,4 +12,4 @@ RUN dotnet publish "BX_Services.csproj" -c Release -o /app/publish /p:UseAppHost
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "BX_Services.dll"]
+ENTRYPOINT ["dotnet", "BX_Services.dll", "--project", "BX_Services.csproj"]
