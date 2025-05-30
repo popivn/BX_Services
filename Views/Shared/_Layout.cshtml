@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="~/BX_Services.styles.css" asp-append-version="true" />
 </head>
 <body>
+    <div id="loading">
+        <div class="load-wrapp rounded-circle">
+            <div class="load-1">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BX_Services</a>
+                <img src="~/images/logo/logo.png" alt="Site Logo" class="img-fluid rounded-circle mx-auto d-block" style="max-width: 80px; height: auto;" />
+                <a class="navbar-brand ms-2 text-pink" asp-area="" asp-controller="Home" asp-action="Index">BX_Services</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,7 +41,7 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 min-vh-100">
             @RenderBody()
         </main>
     </div>
@@ -44,6 +54,15 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            loading.classList.add('fade-out');
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 500);
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

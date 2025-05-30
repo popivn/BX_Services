@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\WorkSpace\\C#\\BX_Services\\BX_Services.csproj": {}
+    "/app/BX_Services.csproj": {}
   },
   "projects": {
-    "C:\\WorkSpace\\C#\\BX_Services\\BX_Services.csproj": {
+    "/app/BX_Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WorkSpace\\C#\\BX_Services\\BX_Services.csproj",
+        "projectUniqueName": "/app/BX_Services.csproj",
         "projectName": "BX_Services",
-        "projectPath": "C:\\WorkSpace\\C#\\BX_Services\\BX_Services.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\WorkSpace\\C#\\BX_Services\\obj\\",
+        "projectPath": "/app/BX_Services.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/app/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.410/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

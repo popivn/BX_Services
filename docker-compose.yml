@@ -11,8 +11,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://+:80
+      - DOTNET_WATCH_RESTART_ON_RUDE_EDIT=true
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - .:/app
+      - ~/.nuget/packages:/root/.nuget/packages:ro
     networks:
       - bx-network
     restart: unless-stopped
